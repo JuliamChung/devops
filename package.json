@@ -1,0 +1,13 @@
+{
+    "name": "JulianApp",
+    "version": "1.0.0",
+    "description": "Julian on the cloud",
+    "author": "Julian Chung <jj@jj.com>",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "*"
+    }
+}
