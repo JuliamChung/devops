@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: pleungmsdevops
+  name: juliandevops
 spec:
   replicas: 1
   strategy:
@@ -12,21 +12,21 @@ spec:
   template:
     metadata:
       labels:
-        app: pleungmsdevops
+        app: juliandevops
     spec:
       containers:
-      - name: pleungtestapp
-        image: pleungcon.azurecr.io/pleungms/pleungmsdevops:$BUILD_ID
+      - name: julianapp
+        image: julianacr.azurecr.io/JuliamChung/devops:$BUILD_ID
         ports:
-        - containerPort: 80
+        - containerPort: 16615
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: pleungmsdevops
+  name: juliandevops
 spec:
   type: LoadBalancer
   ports:
-  - port: 80
+  - port: 16615
   selector:
-    app: pleungmsdevops
+    app: juliandevops
