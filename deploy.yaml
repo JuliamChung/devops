@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: juliandevops
+  name: /JuliamChung-devops
 spec:
   replicas: 1
   strategy:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: julianapp
-        image: julianacr.azurecr.io/JuliamChung/devops:$BUILD_ID
+        image: docker.io/pleungdev/Juliam-devops:$BUILD_ID
         ports:
         - containerPort: 16615
 ---
