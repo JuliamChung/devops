@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: Juliam-devops
+  name: juliam-devops
 spec:
   replicas: 1
   strategy:
@@ -12,21 +12,21 @@ spec:
   template:
     metadata:
       labels:
-        app: Juliam-devops
+        app: juliam-devops
     spec:
       containers:
-      - name: julianapp
-        image: docker.io/pleungdev/Juliam-devops:$BUILD_ID
+      - name: juliam-devops
+        image: docker.io/pleungdev/juliam-devops:$BUILD_ID
         ports:
         - containerPort: 16615
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: Juliam-devops
+  name: juliam-devops
 spec:
   type: LoadBalancer
   ports:
   - port: 16615
   selector:
-    app: Juliam-devops
+    app: juliam-devops
