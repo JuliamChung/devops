@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: juliandevops
+        app: Juliam-devops
     spec:
       containers:
       - name: julianapp
@@ -23,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: juliandevops
+  name: Juliam-devops
 spec:
   type: LoadBalancer
   ports:
   - port: 16615
   selector:
-    app: juliandevops
+    app: Juliam-devops
